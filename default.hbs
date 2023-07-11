@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
+    <title>{{meta_title}}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Preload scripts --}}
+    <link rel="preload" as="style" href="{{asset "build/css/styles.css"}}" />
+    <script src="https://kit.fontawesome.com/df7810f55f.js" crossorigin="anonymous"></script>
+    {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
+    this will take care of caching and cache-busting automatically --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "build/css/styles.css"}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap" rel="stylesheet">
+
+    {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
+    it should always be the last tag before the closing head tag --}}
+    {{ghost_head}}
+
+  </head>
+  <body>
+    {{{body}}}
+  </body>
+</html>

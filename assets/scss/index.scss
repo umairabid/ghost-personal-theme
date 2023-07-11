@@ -1,0 +1,18 @@
+@import "_variables";
+
+.index-page {
+  height: 100%;
+  width: 100%;
+
+  sidebar {
+    display: block;
+    width: 320px;
+    height: 100%;
+    background-color: $primary-color;
+    padding: $base-space * 4;
+
+    .avatar {
+      @include avatar;
+    }
+  }
+}
