@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     height: $nav-height;
-    padding: $nav-spacing;
+    padding: $base-space * 3 $nav-spacing;
 
     .logo img {
       height: 100%;
@@ -45,11 +45,6 @@
 
     .avatar {
       @include avatar;
-    }
-
-    h1 {
-      font-size: 1.4em;
-      font-weight: 400;
     }
   }
 }

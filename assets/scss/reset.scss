@@ -111,7 +111,6 @@ body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
   font-size: $base-font-size;
-  line-height: $base-font-size;
   height: 100%;
 
 }
@@ -122,4 +121,9 @@ a.link-button {
   padding: $base-space * 3 $base-space * 6;
   border-radius: $base-space * 6;
   margin: 0 $base-space;
+}
+
+h1 {
+  font-size: 1.4em;
+  font-weight: 400;
 }
