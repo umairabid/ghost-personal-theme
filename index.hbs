@@ -4,7 +4,7 @@ into the {body} of the default.hbs template --}}
 
 <div class="index-page">
   <sidebar>
-    <div class="avatar"><img src="/assets/avatar.png" height="160" /></div>
+    <div class="avatar"><img src="{{asset "avatar.png"}}" height="160" /></div>
     <h1>Software Engineer</h1>
     <p class="social-links">
       <a href="https://www.linkedin.com/in/umairabid/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -12,5 +12,36 @@ into the {body} of the default.hbs template --}}
     </p>
     {{navigation}}
   </sidebar>
-  <section></section>
+  <section class="main-section">
+    <article class="article {{post_class}}">
+      <div class="post-feed">
+        {{#foreach posts}}
+        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+        <div class="post-card-content">
+          <header class="post-card-header">
+            <a class="post-card-content-link" href="{{url}}"><h3>{{title}}</h3></a>
+            <div class="post-card-tags">
+              {{tags}}
+            </div>
+          </header>
+          {{#if excerpt}}
+          <div class="post-card-excerpt"><p>{{excerpt}}</p></div>
+          {{/if}}
+
+
+          <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+            {{#if reading_time}}
+              <span class="post-card-meta-length">{{reading_time}}</span>
+            {{/if}}
+            {{#if @site.comments_enabled}}
+              {{comment_count}}
+            {{/if}}
+          </footer>
+        </div>
+        {{/foreach}}
+      </div>
+    </article>
+   {{pagination}}
+ </section>
 </div>

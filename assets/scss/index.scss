@@ -3,17 +3,19 @@
 .index-page {
   height: 100%;
   width: 100%;
+  display: flex;
 
   sidebar {
     display: block;
     width: 320px;
     height: 100%;
     background-color: $primary-color;
-    padding: $base-space * 8 $base-space * 4;
     text-align: center;
 
     .avatar {
       @include avatar;
+      padding: $base-space * 8 0;
+      margin: 0;
     }
 
     h1 {
@@ -23,6 +25,7 @@
     .social-links {
       display: flex;
       justify-content: center;
+      padding-bottom: $base-space * 8;
       a {
         padding: $base-space;
         color: #fff;
@@ -31,16 +34,109 @@
     }
 
     .nav {
-      margin: $base-space * 8 0;
+      border-top: 1px $base-color solid;
       list-style: none;
       li {
         text-align: left;
+        border-bottom: 1px $base-color solid;
+
+        &.nav-current {
+          a {
+            background-color: $base-color;
+            color: $secondry-color;
+          }
+        }
       }
       a {
         color: $base-color;
         font-size: 1.2em;
-        padding: $base-space * 2;
+        padding: $base-space * 4;
         display: block;
+      }
+    }
+  }
+
+  section.main-section {
+    width: calc(100% - 320px);
+    height: 100%;
+    overflow: auto;
+    padding: $base-space * 8 $base-space * 16;
+    color: $text-color;
+    line-height: 1.6em;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article.article {
+    width: $base-space * 230;
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: $base-space * 8;
+      color: $secondry-color;
+      line-height: 1.2em;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      margin-top: $base-space * 6;
+      color: $secondry-color;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      margin-top: $base-space * 6;
+      color: $secondry-color;
+    }
+
+    a {
+      color: $secondry-color;
+    }
+
+    p {
+      margin: $base-space * 4 0;
+    }
+
+    ol {
+      padding-left: $base-space * 7;
+      li {
+        margin-bottom: $base-space * 4;
+      }
+    }
+
+    .post-card-content {
+      border-bottom: 1px solid #eee;
+      padding-bottom: $base-space * 6;
+
+      .post-card-meta {
+        font-size: 0.8em;
+        color: $secondry-text-color;
+
+        .post-card-meta-length {
+          &:before {
+            content: " ";
+            width: 2px;
+            height: 2px;
+            background-color: $secondry-text-color;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            margin-left: 3px;
+            border-radius: 12px;
+          }
+        }
+      }
+
+      .post-card-tags {
+        a {
+          background-color: $primary-color;
+          color: $base-color;
+          font-size: 0.8em;
+          padding: 4px 8px;
+          border-radius: 100px;
+        }
       }
     }
   }

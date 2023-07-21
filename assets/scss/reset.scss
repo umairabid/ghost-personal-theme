@@ -89,12 +89,12 @@ video {
 }
 
 a:hover {
-    color: #377df7;
+    color: $secondry-color;
 }
 
 a, a:visited {
   text-decoration: none;
-  color: #377df7
+  color: $secondry-color;
 }
 
 html {
@@ -126,4 +126,9 @@ a.link-button {
 h1 {
   font-size: 1.4em;
   font-weight: 400;
+}
+
+.kg-width-full,
+.kg-width-wide {
+    width: 100%;
 }

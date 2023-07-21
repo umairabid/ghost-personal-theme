@@ -1,8 +1,13 @@
 {
-    "name": "Personal",
+    "name": "personal",
     "description": "A brief explanation of your theme",
     "version": "0.0.1",
     "license": "MIT",
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
     "author": {
         "email": "umairac90@gmail.com"
     },
