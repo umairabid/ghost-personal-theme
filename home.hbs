@@ -1,6 +1,7 @@
 {{!< default}}
 
 <div class="homepage">
+  {{> "sidebar-card"}}
   <div class="top-nav">
     <div class="logo">
       <img src="{{asset "logo.svg"}}" />
@@ -11,10 +12,20 @@
     <div class="inner-content">
       <div class="avatar"><img src="{{asset "avatar.png"}}" height="240px" /></div>
       <h1>Solution Architect | Polygot Engineer | Always Curious</h1>
-      <p>I design and engineer efficient solutions with a love for elegant design and flawless code</p>
+      <p class="tagline">I design and engineer efficient solutions with a love for elegant design and flawless code</p>
       <p class="social-links">
-        <a class="link-button" href="https://www.linkedin.com/in/umairabid/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a class="link-button" href="https://github.com/umairabid" target="_blank"><i class="fab fa-github-square"></i> GitHub</a>
+        <a class="link-button" href="https://www.linkedin.com/in/umairabid/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+          <span class="hide-on-mobile">LinkedIn</span>
+        </a>
+        <a class="link-button" href="https://github.com/umairabid" target="_blank">
+          <i class="fab fa-github-square"></i>
+          <span class="hide-on-mobile">GitHub</span>
+        </a>
+        <a class="link-button" href="https://twitter.com/umairabid_" target="_blank">
+          <i class="fab fa-twitter-square"></i>
+          <span class="hide-on-mobile">Twitter</span>
+        </a>
       </p>
     </div>
   </div>

@@ -5,15 +5,7 @@ into the {body} of the default.hbs template --}}
 {{#post}}
 
 <div class="index-page">
-  <sidebar>
-    <div class="avatar"><img src="{{asset "avatar.png"}}" height="160" /></div>
-    <h1>Software Engineer</h1>
-    <p class="social-links">
-      <a href="https://www.linkedin.com/in/umairabid/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/umairabid" target="_blank"><i class="fab fa-github-square"></i></a>
-    </p>
-    {{navigation}}
-  </sidebar>
+  {{> "sidebar-card"}}
   {{!-- Everything inside the #post block pulls data from the page --}}
   <section class="main-section">
     <article class="article {{post_class}}">

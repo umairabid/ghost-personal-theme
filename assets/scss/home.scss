@@ -28,6 +28,10 @@
     }
   }
 
+  .main-sidebar {
+    display: none;
+  }
+
   .main-section {
     background-color: $primary-color;
     height: calc(100% - $nav-height);

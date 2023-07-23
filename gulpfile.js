@@ -11,17 +11,24 @@ function serve(done) {
 }
 
 function css() {
-  return src('./assets/scss/**/*.scss')
+  return src(['./assets/scss/reset.scss', './assets/scss/**/*.scss', './assets/scss/mobile.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(cssnano())
     .pipe(concat('styles.css'))
     .pipe(dest('./assets/build/css/'));
 };
 
-const cssWatcher = () => watch('assets/scss/**', css);
-const watcher = parallel(cssWatcher);
+function js() {
+  return src('./assets/js/**/*.js')
+    .pipe(concat('scripts.js'))
+    .pipe(dest('./assets/build/js/'));
+};
 
-const build = series(css);
+const cssWatcher = () => watch('assets/scss/**', css);
+const jsWatcher = () => watch('assets/js/**', js);
+const watcher = parallel(cssWatcher, jsWatcher);
+
+const build = series(css, js);
 
 exports.build = build;
 exports.default = series(build, serve, watcher);
