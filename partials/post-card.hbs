@@ -1,0 +1,22 @@
+<div class="post-card-content">
+  <header class="post-card-header">
+    <a class="post-card-content-link" href="{{url}}"><h3>{{title}}</h3></a>
+    <div class="post-card-tags">
+      {{tags}}
+    </div>
+  </header>
+  {{#if excerpt}}
+  <div class="post-card-excerpt"><p>{{excerpt}}</p></div>
+  {{/if}}
+
+
+  <footer class="post-card-meta">
+    <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+    {{#if reading_time}}
+      <span class="post-card-meta-length">{{reading_time}}</span>
+    {{/if}}
+    {{#if @site.comments_enabled}}
+      {{comment_count}}
+    {{/if}}
+  </footer>
+</div>

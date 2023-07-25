@@ -5,6 +5,18 @@
   padding-bottom: $base-space * 6;
   margin-bottom: $base-space * 6;
 
+  .post-card-header {
+    .post-card-tags {
+      a {
+        background-color: $primary-color;
+        color: $base-color;
+        font-size: 0.8em;
+        padding: 4px 8px;
+        border-radius: 100px;
+      }
+    }
+  }
+
   .post-card-meta {
     font-size: 0.8em;
     color: $secondry-text-color;
@@ -21,16 +33,6 @@
         margin-left: 3px;
         border-radius: 12px;
       }
-    }
-  }
-
-  .post-card-tags {
-    a {
-      background-color: $primary-color;
-      color: $base-color;
-      font-size: 0.8em;
-      padding: 4px 8px;
-      border-radius: 100px;
     }
   }
 }
