@@ -5,7 +5,15 @@ into the {body} of the default.hbs template --}}
 <div class="index-page">
   {{> "sidebar-card"}}
   <section class="main-section">
-    <article class="article {{post_class}}">
+    <article class="article post-list">
+      {{#is "tag"}}
+        <div class="category">
+          {{#tag}}
+            <h2> {{ name }} Articles </h2>
+            <p> {{ description }} </p>
+          {{/tag}}
+        </div>
+      {{/is}}
       <div class="post-feed">
         {{#foreach posts}}
           {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
