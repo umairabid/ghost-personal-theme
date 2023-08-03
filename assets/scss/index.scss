@@ -116,10 +116,7 @@
       .kg-card {
         display: flex;
         margin: $base-space * 10 0;
-
-        img {
-          width: 100%;
-        }
+        justify-content: center;
       }
 
       blockquote {
