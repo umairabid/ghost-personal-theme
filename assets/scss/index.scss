@@ -34,11 +34,16 @@
     }
 
     h2 {
-      font-size: 1.4em;
+      font-size: 1.6em;
       color: $secondry-color;
     }
 
     h3 {
+      font-size: 1.4em;
+      color: $secondry-color;
+    }
+
+    h4 {
       font-size: 1.2em;
       color: $secondry-color;
     }
@@ -57,11 +62,15 @@
       }
 
       h2 {
-        margin-top: $base-space * 8;
+        margin-top: $base-space * 6;
       }
 
       h3 {
-        margin-top: $base-space * 8;
+        margin-top: $base-space * 4;
+      }
+
+      h3 {
+        margin-top: $base-space * 2;
       }
 
       strong {
